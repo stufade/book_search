@@ -1,0 +1,71 @@
+.listWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.listItem {
+  width: 220px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0 10px 13px 5px #f1f1f1;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 7px 15px 1px rgba(2, 105, 164, 0.4);
+  }
+}
+
+.imageWrapper {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-height: 180px;
+  max-width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.noImageText {
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.category {
+  color: var(--blue-color);
+  font-size: 13px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-top: 10px;
+  gap: 7px;
+}
+
+.author {
+
+}
