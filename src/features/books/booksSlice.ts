@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 import { BookType } from "./BookType";
-import { key } from "../../../api";
+import { key } from "../../api";
 
 type Statuses = "idle" | "success" | "loading" | "failed";
 
