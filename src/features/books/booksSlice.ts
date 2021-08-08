@@ -3,7 +3,7 @@ import { RootState } from "../../app/store";
 import { BookType } from "./BookType";
 import { key } from "../../api";
 
-type Statuses = "idle" | "success" | "loading" | "failed";
+type Statuses = "idle" | "success" | "loading" | "failed" | "no books";
 
 interface PayloadActionValue {
     totalItems: number;
@@ -60,6 +60,10 @@ export const booksSlice = createSlice({
                 state.status = "loading";
             })
             .addCase(fetchBooks.fulfilled, ((state, action: PayloadAction<PayloadActionValue>) => {
+                if (!action.payload.items) {
+                    state.status = "no books";
+                    return;
+                }
                 state.status = "success";
                 state.totalItems = action.payload.totalItems;
                 state.items = [...state.items, ...action.payload.items];

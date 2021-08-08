@@ -21,7 +21,7 @@ const SingleBook: React.FC = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.imageWrapper} id="image">
+            <div className={styles.imageWrapper}>
                 {
                     book.volumeInfo.imageLinks?.thumbnail ?
                         <img className={styles.image} src={book.volumeInfo.imageLinks.thumbnail} alt=""/> :

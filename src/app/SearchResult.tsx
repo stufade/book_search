@@ -13,9 +13,7 @@ const SearchResult: React.FC = () => {
     // To prevent loading spinner when "Load more" button is pressed
     if (status === "loading" && numberOfBooks === null) {
         render = <div className={styles.loader}>Loading...</div>;
-    } else if (numberOfBooks === null) {
-        render = <>{null}</>;
-    } else if (status === "success" || numberOfBooks > 0) {
+    } else if (status === "success" || numberOfBooks) {
         render = (
             <div className={styles.wrapper}>
                 <NumberOfResults />
@@ -24,7 +22,7 @@ const SearchResult: React.FC = () => {
         );
     } else if (status === "failed") {
         render = <div className={styles.error}>An error occurred. Try again!</div>;
-    } else if (numberOfBooks === 0) {
+    } else if (status === "no books") {
         render = <div className={styles.error}>No books found</div>;
     }
 

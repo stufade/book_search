@@ -21,9 +21,11 @@ const LoadMoreButton: React.FC = () => {
                 Load More
             </button>
         );
+    } else {
+        render = <div className={styles.text}>No more books</div>;
     }
 
     return render;
-}
+};
 
 export default LoadMoreButton;

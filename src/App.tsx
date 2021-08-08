@@ -16,7 +16,7 @@ function App() {
                 <Route path="/books/:id">
                     <SingleBook />
                 </Route>
-                <Route path="/">
+                <Route path="/" exact>
                     <SearchResult />
                 </Route>
                 <Redirect to="/" />
