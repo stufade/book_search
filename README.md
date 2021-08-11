@@ -9,7 +9,7 @@ https://search-for-books-react.herokuapp.com/
 - SCSS
 - React-router
 
-## Backend
+## Backend *(For hosting the website only)*
 - Node.js
 - Express.js
 - Heroku
